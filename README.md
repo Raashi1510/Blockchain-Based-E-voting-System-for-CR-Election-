@@ -1,4 +1,4 @@
-# BLOCKELECT - Blockchain Based E-Voting System for CR Election
+# Blockchain Based E-Voting System for CR Election
 
 A secure and transparent blockchain-based voting system developed using Ethereum smart contracts, Web3.js, Solidity, Ganache, and MetaMask.
 
