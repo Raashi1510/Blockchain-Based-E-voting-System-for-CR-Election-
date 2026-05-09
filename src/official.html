@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Electoral Commission Dashboard ― BLOCKELECT</title>
+
+    <link rel="stylesheet" type="text/css" href="css/official.css">
+    <link rel="stylesheet" type="text/css" href="icons/bootstrap-icons.css">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/alert.css">
+    <script src="/js/alert.js" defer></script>
+
+
+<body>
+
+    <video autoplay muted loop>
+        <source src="assets/blockchain.mp4" type="video/mp4">
+    </video>
+
+    <div id="content">
+
+        <a href="/official.html">
+            <img src="assets/logo.svg" alt="BLOCKELECT Logo">
+        </a>
+
+        <small class="tagline">
+            A Secure Voting System Based on the Ethereum Blockchain
+        </small>
+
+        <main id="page">
+
+            <!-- ACCOUNT INFO -->
+            <div id="accountBox">
+                <div id="account">
+                    <p id="acctLabel">
+                        <i class="bi bi-person-circle"></i>
+                        <b>Your Acct:</b>
+                        <span id="acctAddress"></span>
+                    </p>
+                    <p id="acctType"></p>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <h1>Commission Dashboard</h1>
+
+                <!-- ELECTION STATS -->
+                <div id="electionStats" class="election-stats">
+                    <p>Loading election data...</p>
+                </div>
+
+
+                <!-- CURRENT CANDIDATES -->
+                <div id="currentCandidates" class="current-candidates">
+                    <p>Loading candidates...</p>
+                </div>
+
+                <!-- ADD CANDIDATE -->
+                <section>
+                    <h3><i class="bi bi-person-fill-add"></i> Register Candidate</h3>
+
+                    <input id="name" type="text" placeholder="Candidate Name">
+                    <input id="party" type="text" placeholder="Candidate Division">
+
+                    <input id="addCandidate" type="submit" value="Register">
+                </section>
+
+                <!-- SET ELECTION DATES -->
+                <section>
+                    <h3><i class="bi bi-calendar-plus-fill"></i> Set Election Dates</h3>
+
+                    <label>Start Date & Time</label>
+                    <input id="startDate" type="datetime-local">
+
+                    <label>End Date & Time</label>
+                    <input id="endDate" type="datetime-local">
+
+                    <input id="addDate" type="submit" value="Set Dates">
+                </section>
+
+                <!-- RESET -->
+                <section class="danger-section">
+                    <h3><i class="bi bi-exclamation-triangle-fill"></i> Danger Zone</h3>
+
+                    <p style="color: #f2a4a4;">
+                        This will permanently delete all election data and reset votes.
+                    </p>
+
+                    <input id="resetElection" type="submit"
+                        value="Cancel Election" class="btn-danger">
+                </section>
+
+            </div>
+        </main>
+
+        <!-- ACCESS DENIED -->
+        <aside id="accessDenied">
+            <h1>Voter Detected!</h1>
+            <p class="info">Redirecting to Voting page...</p>
+        </aside>
+
+        <!-- NO WALLET -->
+        <aside id="noWallet">
+            <h1>Wallet Required!</h1>
+            <p class="info">
+                Please install MetaMask and reload the page.
+            </p>
+        </aside>
+
+    </div>
+
+    <!-- MAIN JS -->
+    <script type="module" src="../dist/main.js"></script>
+
+</body>
+
+</html>

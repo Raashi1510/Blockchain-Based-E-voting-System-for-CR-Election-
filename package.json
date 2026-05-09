@@ -1,0 +1,28 @@
+{
+  "name": "blockelect",
+  "version": "1.0.0",
+  "description": "Blockchain Voting System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "webpack",
+    "dev": "webpack --watch"
+  },
+  "author": "Samuel A. Ughili & Joshua U. Ngwuoke",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "truffle": "^5.11.5",
+    "web3": "^4.16.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "babel-loader": "^9.2.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.1",
+    "esbuild": "^0.25.9",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^6.0.1"
+  }
+}

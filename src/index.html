@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Voting ― BLOCKELECT</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="icons/bootstrap-icons.css">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/alert.css">
+    <script src="/js/alert.js" defer></script>
+</head>
+
+<body>
+    <video autoplay muted loop>
+        <source src="assets/blockchain.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="content">
+        <a href="/"><img src="assets/logo.svg" alt="BLOCKELECT Logo"></a>
+        <small class="tagline">A Secure Voting System Based on the Ethereum Blockchain</small>
+
+        <main id="page">
+            <div id="accountBox">
+                <div id="account">
+                    <p id="acctLabel">
+                        <i class="bi bi-person-circle"></i>
+                        <b>Your Acct:</b>
+                    </p>
+                    <p id="acctAddress"></p>
+                    <p id="acctType"></p>
+                </div>
+            </div>
+
+            <div id="candidate" class="container">
+                <h1>Voting</h1>
+                <p class="info"><b>Election Dates | </b><span id="dates">Loading Dates...</span></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><i class="bi bi-person-raised-hand"></i> Candidate</th>
+                            <th><i class="bi bi-flag-fill"></i> Division</th>
+                            <th><i class="bi bi-graph-up-arrow"></i> Total Vote</th>
+                        </tr>
+                    </thead>
+                    <tbody id="boxCandidate"></tbody>
+                </table>
+
+                <p class="info" id="cantVote" style="display:none;">You can't vote because no candidates have been declared.</p>
+
+                <div id="vote" style="display: none;">
+                    <p class="info">Please select one of the candidates and click the “Cast Vote” button.</p>
+                    <button id="voteButton" class="btn btn-primary" onclick="App.vote()" disabled>Cast Vote</button>
+                    <div id="msg"></div>
+                </div>
+            </div>
+        </main>
+
+        <aside id="accessDenied">
+            <h1>Official Detected!</h1>
+            <p class="info">Redirecting to Commission Dashboard...</p>
+        </aside>
+
+        <aside id="noWallet">
+            <h1>Wallet Required!</h1>
+            <p class="info">To use this application, please install MetaMask cryptocurrency wallet extension for your
+                browser and reload this page.</p>
+        </aside>
+    </div>
+
+    <script type="module" src="../dist/main.js"></script>
+</body>
+
+</html>
