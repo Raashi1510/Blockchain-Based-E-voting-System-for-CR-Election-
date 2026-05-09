@@ -1,5 +1,8 @@
-# BLOCKELECT: Blockchain-Based Secure Voting System
-![BLOCKELECT - Blockchain Voting System](https://raw.githubusercontent.com/Skismail57/BLOCKELECT-BlockchainVoting-System/main/assets/banner.jpg)
+# BLOCKELECT - Blockchain Based E-Voting System for CR Election
+
+A secure and transparent blockchain-based voting system developed using Ethereum smart contracts, Web3.js, Solidity, Ganache, and MetaMask.
+
+---
 
 
 
@@ -7,98 +10,175 @@
 
 *Traditional electoral systems exhibit critical vulnerabilities including vote manipulation, centralized points of failure, and compromised transparency that undermine democratic integrity. This research presents a decentralised blockchain-based secure voting system designed to address these challenges. The system employs Ethereum smart contracts written in Solidity to enforce immutable voting rules, Web3.js for blockchain integration, and MetaMask wallet authentication for secure voter verification. The architecture implements dual interfaces for voters and electoral commissions, with distributed consensus mechanisms ensuring real-time transaction validation. Smart contracts automatically enforce electoral rules while maintaining cryptographic immutability of voting transactions. The decentralised design eliminates single points of failure by distributing vote storage and validation across multiple nodes. System validation included unit, integration, system, and security testing. Results show prevention of vote tampering, elimination of double voting, and transparent, auditable election results. Implementation used Truffle framework, Ganache blockchain simulation, and Node.js back-end services following an Agile Prototype-based Iterative Development methodology. This work demonstrates blockchain’s feasibility in creating trustworthy electoral systems, offering a viable solution to electoral fraud and public confidence issues.*
 
+## 📌 Project Overview
 
-## ⚙️ Features
+BLOCKELECT is a decentralized voting application that enables secure and tamper-proof elections using blockchain technology. The system ensures transparency, immutability, and fairness in the voting process.
 
-- Uses Web3 wallet authentication for secure, decentralised user address verification.
-- Employs Ethereum smart contracts to immutably record and secure votes on-chain.
-- Removes centralised databases by using blockchain’s tamper-proof distributed ledger.
-- Offers a permissioned commission dashboard with role-based management controls and real-time election monitoring.
-- Provides a clean UI for seamless voting, transparent candidate information, and live blockchain feedback.
+The project provides:
+- Secure vote casting
+- One person, one vote
+- Transparent election results
+- Role-based access control
+- Automatic winner declaration
 
-## 🛠️ Requirements
+---
 
-The following software versions are recommended for deploying this application (other versions might work).
+## 🚀 Features
 
-- Node.js `v22.14.0`
-- Web3.js `v1.10.0`
-- Express.js `v4.17.14`
-- Solidity `v0.8.19` (solc-js)
-- Truffle `v5.11.5` (core: 5.11.5)
-- Ganache GUI `v2.7.1` (or Ganache CLI `v7.9.1`)
-- MetaMask `v13.1.0`
-- ESBuild `v0.25.9` (or Browserify + Babelify or any ES6 bundler)
+### 🔹 Secure and Transparent Voting
+- Votes are securely stored on blockchain
+- Prevents tampering and manipulation
 
-## 📱 Screenshots
+### 🔹 Immutable Vote Storage
+- Once a vote is cast, it cannot be changed or deleted
 
- ![No Wallet (Voting Page)](./views/wallet_required.png)
- ![Sign In (Voting Page)](./views/sign_in.png)
- ![Voter Detected (Electoral Commission Dashboard)](./views/voter_detected.png)
- ![Voting Page](./views/voting.png)
- ![Official Detected (Voting Page)](./views/official_detected.png)
- ![Electoral Commission Dashboard](./views/commission_dashboard.png)
+### 🔹 Smart Contract Automation
+- Automates candidate registration, voting, and result declaration
 
+### 🔹 Role-Based Access
+- Officials manage elections
+- Voters cast votes
 
+### 🔹 Election Time Control
+- Voting is only allowed between selected start and end time
 
-## 📂 Structure
+### 🔹 Winner Declaration
+- Automatically displays the winning candidate after election ends
 
-The project directory is organised as follows:
+---
 
-```
-BLOCKELECT (Prototype)              # Project root directory
-|
-├── build/                          # Contract build artifacts
-│   └── contracts/
-│       └── VotingSys.json
-├── contracts/                      # Solidity smart contracts
+## 🛠️ Technologies Used
+
+- Solidity
+- Ethereum Blockchain
+- Web3.js
+- MetaMask
+- Ganache
+- Truffle
+- HTML
+- CSS
+- JavaScript
+
+---
+
+## 📂 Project Structure
+
+```bash
+BLOCKELECT/
+│
+├── contracts/
 │   └── VotingSys.sol
-├── dist/                           # Bundled/compiled frontend files for deployment
-│   └── app.bundle.js
-├── migrations/                     # Truffle migration scripts
-│   └── 1_deploy_contracts.js
-├── node_modules/                   # NPM dependencies
-├── src/                            # Application source files
-│   ├── assets/                     # Media assets
-│   │   ├── blockchain.mp4
-│   │   ├── favicon.svg
-│   │   └── logo.svg
-│   ├── css/                        # UI stylesheets
-│   │   ├── alert.css
-│   │   ├── index.css
-│   │   └── official.css
-│   ├── icons/                      # Bootstrap icon set
-│   │   ├── fonts/
-│   │   └── bootstrap-icons.css
-│   ├── js/                         # JavaScript logic files
-│   │   ├── alert.js
+│
+├── src/
+│   ├── js/
 │   │   └── app.js
-│   ├── sounds/                     # Sound effects
-│   │   ├── error.wav
-│   │   ├── info.wav
-│   │   ├── success.wav
-│   │   └── warning.wav
-│   ├── index.html                  # Voter-facing interface
-│   └── official.html               # Official (admin) interface
-├── views/                          # UI screenshots for documentation
-│   ├── commission_dashboard.png
-│   ├── official_detected.png
-│   ├── sign_in.png
-│   ├── voter_detected.png
-│   ├── voting.png
-│   └── wallet_required.png
-├── LICENSE                         # Project license file
-├── package-lock.json               # Locked versions of Node.js dependencies
-├── package.json                    # Project metadata & Node.js package configuration
-├── README.md                       # Project documentation
-├── server.js                       # Backend server (Node.js application entry-point)
-└── truffle-config.js               # Truffle configuration file
+│   ├── official.html
+│   └── index.html
+│
+├── migrations/
+├── build/
+├── test/
+└── truffle-config.js
 ```
 
-## ⚖️ License
+---
 
-This project is licensed under the MIT License―you are free to use, modify, and distribute of it, with attribution, but without warranty. To see a full breakdown of this license, click [here](./LICENSE).
+## ⚙️ Installation & Setup
 
-**Attribution**
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/Raashi1510/Blockchain-Based-E-voting-System-for-CR-Election-.git
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3️⃣ Start Ganache
+
+Run Ganache and keep it active.
+
+---
+
+### 4️⃣ Deploy Smart Contract
+
+```bash
+truffle migrate --reset
+```
+
+---
+
+### 5️⃣ Start Project
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔐 Smart Contract Functionalities
+
+- Add Official
+- Add Candidate
+- Remove Candidate
+- Set Election Dates
+- Vote
+- Reset Election
+- Get Winner
+- Get Total Votes
+
+---
+
+## 👨‍💻 Roles in System
+
+### 🧑‍💼 Official
+- Add candidates
+- Set election dates
+- Add other officials
+- Reset election
+- View winner
+
+### 🗳️ Voter
+- View candidates
+- Cast vote
+- Vote only once
+
+---
+
+## 🔮 Future Enhancements
+
+- Biometric Authentication
+- Aadhaar Integration
+- Deploy on Public Ethereum Network
+- Mobile Application
+- Live Result Analytics
+
+---
+
+## 📖 Conclusion
+
+BLOCKELECT demonstrates how blockchain technology can improve election systems by ensuring security, transparency, decentralization, and trust in the voting process.
+
+---
+
+## 👩‍💻 Author
+
+### Raashi Gada
+
+Final Year Information Technology Student
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
 
 All the sound effects included in this project are from Microsoft Windows, which are the property of Microsoft Corporation. These sounds are used for demonstration purposes only and remain subject to Microsoft’s copyright and licensing terms.
 
